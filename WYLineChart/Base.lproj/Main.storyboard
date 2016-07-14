@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qYM-KM-vje">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="WG3-th-A3n">
+            <objects>
+                <tableViewController id="fG5-kn-kBv" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qjw-wT-eeV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Q9g-IB-gnE">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q9g-IB-gnE" id="xaI-Tz-qO3">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fG5-kn-kBv" id="TGn-u6-5tN"/>
+                            <outlet property="delegate" destination="fG5-kn-kBv" id="g4z-rL-2Yu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="g8W-f6-8qf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUi-0a-eUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-557" y="665"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i0A-2W-Bjx">
+            <objects>
+                <navigationController id="qYM-KM-vje" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wgW-Yc-1YE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qa0-KT-JLP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xgf-0S-53a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584" y="-85"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +61,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFL-OW-A4w">
+                                <rect key="frame" x="100" y="200" width="400" height="30"/>
+                                <state key="normal" title="Fixed LineChart"/>
+                                <connections>
+                                    <action selector="lineChartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vcv-Rx-xhl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RR2-wc-b95">
+                                <rect key="frame" x="245" y="250" width="110" height="30"/>
+                                <state key="normal" title="Scroll LineChart"/>
+                                <connections>
+                                    <action selector="scrollLineChartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTT-jL-f3E"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jFL-OW-A4w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="GWA-Pl-ps7"/>
+                            <constraint firstItem="jFL-OW-A4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RLh-bB-lSs"/>
+                            <constraint firstItem="jFL-OW-A4w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="200" id="avH-aq-Wru"/>
+                            <constraint firstItem="RR2-wc-b95" firstAttribute="top" secondItem="jFL-OW-A4w" secondAttribute="bottom" constant="20" id="qbg-Lm-szI"/>
+                            <constraint firstItem="RR2-wc-b95" firstAttribute="centerX" secondItem="jFL-OW-A4w" secondAttribute="centerX" id="u7h-Rn-jcc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bGf-hF-G4U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="233" y="-85"/>
         </scene>
     </scenes>
 </document>

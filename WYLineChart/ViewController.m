@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WYLineChartViewController.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)lineChartButton:(id)sender {
+    WYLineChartViewController *lineChart = [[WYLineChartViewController alloc] init];
+    lineChart.num = 0;
+    [self.navigationController pushViewController:lineChart animated:YES];
+}
+- (IBAction)scrollLineChartButton:(id)sender {
+    WYLineChartViewController *lineChart = [[WYLineChartViewController alloc] init];
+    lineChart.num = 7;
+    [self.navigationController pushViewController:lineChart animated:YES];
 }
 
 @end

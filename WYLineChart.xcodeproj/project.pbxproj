@@ -15,6 +15,9 @@
 		8916BF4B1D23797C0031A140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8916BF491D23797C0031A140 /* LaunchScreen.storyboard */; };
 		8916BF561D23797C0031A140 /* WYLineChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8916BF551D23797C0031A140 /* WYLineChartTests.m */; };
 		8916BF611D23797C0031A140 /* WYLineChartUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8916BF601D23797C0031A140 /* WYLineChartUITests.m */; };
+		8916BF711D237A850031A140 /* WYLineChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8916BF6F1D237A850031A140 /* WYLineChartViewController.m */; };
+		8916BF721D237A850031A140 /* WYLineChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8916BF701D237A850031A140 /* WYLineChartViewController.xib */; };
+		8916BF751D239AC40031A140 /* WYLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8916BF741D239AC40031A140 /* WYLineChartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		8916BF5C1D23797C0031A140 /* WYLineChartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYLineChartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8916BF601D23797C0031A140 /* WYLineChartUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYLineChartUITests.m; sourceTree = "<group>"; };
 		8916BF621D23797C0031A140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8916BF6E1D237A850031A140 /* WYLineChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYLineChartViewController.h; sourceTree = "<group>"; };
+		8916BF6F1D237A850031A140 /* WYLineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYLineChartViewController.m; sourceTree = "<group>"; };
+		8916BF701D237A850031A140 /* WYLineChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYLineChartViewController.xib; sourceTree = "<group>"; };
+		8916BF731D239AC40031A140 /* WYLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYLineChartView.h; sourceTree = "<group>"; };
+		8916BF741D239AC40031A140 /* WYLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYLineChartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,11 @@
 				8916BF3F1D23797C0031A140 /* AppDelegate.m */,
 				8916BF411D23797C0031A140 /* ViewController.h */,
 				8916BF421D23797C0031A140 /* ViewController.m */,
+				8916BF6E1D237A850031A140 /* WYLineChartViewController.h */,
+				8916BF6F1D237A850031A140 /* WYLineChartViewController.m */,
+				8916BF701D237A850031A140 /* WYLineChartViewController.xib */,
+				8916BF731D239AC40031A140 /* WYLineChartView.h */,
+				8916BF741D239AC40031A140 /* WYLineChartView.m */,
 				8916BF441D23797C0031A140 /* Main.storyboard */,
 				8916BF471D23797C0031A140 /* Assets.xcassets */,
 				8916BF491D23797C0031A140 /* LaunchScreen.storyboard */,
@@ -246,6 +259,7 @@
 				8916BF4B1D23797C0031A140 /* LaunchScreen.storyboard in Resources */,
 				8916BF481D23797C0031A140 /* Assets.xcassets in Resources */,
 				8916BF461D23797C0031A140 /* Main.storyboard in Resources */,
+				8916BF721D237A850031A140 /* WYLineChartViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8916BF431D23797C0031A140 /* ViewController.m in Sources */,
+				8916BF751D239AC40031A140 /* WYLineChartView.m in Sources */,
 				8916BF401D23797C0031A140 /* AppDelegate.m in Sources */,
 				8916BF3D1D23797C0031A140 /* main.m in Sources */,
+				8916BF711D237A850031A140 /* WYLineChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +514,7 @@
 				8916BF671D23797C0031A140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8916BF681D23797C0031A140 /* Build configuration list for PBXNativeTarget "WYLineChartTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +523,7 @@
 				8916BF6A1D23797C0031A140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8916BF6B1D23797C0031A140 /* Build configuration list for PBXNativeTarget "WYLineChartUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +532,7 @@
 				8916BF6D1D23797C0031A140 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
